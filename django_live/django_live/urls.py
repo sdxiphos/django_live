@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from first_app import views
+from help_app.views import index2
 
 urlpatterns = [
+    path('help/',index2),
     path('test/',views.index),
     path('admin/', admin.site.urls),
 ]
